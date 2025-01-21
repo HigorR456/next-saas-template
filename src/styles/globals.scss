@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+
+  p {
+    color: var(--color-grey);
+  }
+
+  h1 {
+    color: var(--color-black);
+    font-size: 48px;
+    margin: 24px 0;
+  }
+
+  h2 {
+    color: var(--color-black);
+    font-size: 32px;
+    margin: 16px 0;
+  }
+
+  button {
+    transition: all 0.2s ease-in-out;
+    font-weight: bold;
+
+    &:hover {
+      transform: translate(0, -2px);
+    }
+  }
+}
+
+:root {
+  --color-black: #000;
+  --color-grey: #606060;
+  --color-blue: #2684ff;
+  --color-divider: #E0E0E0;
+  --color-success: #41aa41;
+  --color-error: #f44336;
+}

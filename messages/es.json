@@ -1,0 +1,31 @@
+{
+  "Common": {
+    "title": "next-saas-template",
+    "description": "Lanza tu producto SaaS más rápido que nunca con esta plantilla."
+  },
+  "Navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "pricing": "Precios",
+    "signup": "Regístrate"
+  },
+  "HomePage": {
+    "head": {
+      "name": "next-saas-template",
+      "imageUrl": "/Logo.svg",
+      "title": "next-saas-template",
+      "description": "Lanza tu producto SaaS más rápido que nunca con esta plantilla.",
+      "url": "/"
+    }
+  },
+  "AboutPage": {
+    "head": {
+      "name": "next-saas-template",
+      "imageUrl": "/Logo.svg",
+      "title": "next-saas-template",
+      "description": "Lanza tu producto SaaS más rápido que nunca con esta plantilla.",
+      "url": "/"
+    },
+    "intro": "<h1>Acerca de next-saas-template</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p><h2>🌐 Nuestra misión</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Donec ac metus vel ipsum laoreet ultricies.</p><h2>✅ ¿Por qué elegir next-saas-template?</h2><ul><li><strong>Plataforma Lorem Ipsum:</strong> Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</li><li><strong>Plantillas personalizables:</strong> Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</li><li><strong>Infraestructura escalable:</strong> Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</li><li><strong>Seguro por diseño:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li><strong>Acceso multiplataforma:</strong> Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li></ul><h2>🛠️ Lo que ofrecemos</h2><ul><li><strong>Plantillas listas para usar:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li><li><strong>Integraciones potentes:</strong> Sed posuere consectetur est at lobortis.</li><li><strong>Soluciones escalables:</strong> Maecenas faucibus mollis interdum.</li></ul>"
+  }
+}
