@@ -1,4 +1,5 @@
 "use client"
+import SignIn from "@/components/sign-in";
 import Layout from "@/layout";
 import * as Style from "@/templates/home/styles"
 import { useTranslations } from 'next-intl';
@@ -49,6 +50,8 @@ export default function HomeTemplate({ page }: HomeTemplateProps) {
             <h2>{t('title')}</h2>
             <p>{t('description')}</p>
           </Style.Intro>
+
+          <SignIn></SignIn>
         </div>
       </Style.Wrapper>
     </Layout>
