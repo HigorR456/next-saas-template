@@ -158,8 +158,7 @@ export const HighlightList = styled.li`
   &:active {background: black;}
   a {
     padding-inline: 8px;
-    color: white;
-    &:hover {color: white;}
+    color: white !important;
   }
 `;
 
@@ -217,4 +216,32 @@ export const LogoWrap = styled(Link)`
       filter: brightness(0) grayscale(1);
     }
   }
+`;
+
+export const SignUpWrap = styled.div`
+
+`;
+
+export const ContinueWithEmailButton = styled.button`
+  all: unset;
+  cursor: pointer;
+  margin-top: 1rem;
+  border: 1px solid var(--color-grey);
+  border-radius: 3px;
+  background: white;
+  padding-inline: 8px;
+  color: var(--color-grey);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 48px;
+  height: 48px;
+  color: #606060;
+  width: 100%;
+  transition: .1s;
+  svg {
+    margin-right: 4px;
+  }
+  &:hover { color: #202020; }
+  &:active { color: black; }
 `;

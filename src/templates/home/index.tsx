@@ -1,15 +1,17 @@
 "use client"
-import SignIn from "@/components/sign-in";
+import SignIn from "@/components/google-sign-in";
 import Layout from "@/layout";
 import * as Style from "@/templates/home/styles"
+import { SessionType } from "@/types";
 import { useTranslations } from 'next-intl';
 import { usePathname } from "next/navigation";
 
 type HomeTemplateProps = {
   page: string
+  session: SessionType | null
 }
 
-export default function HomeTemplate({ page }: HomeTemplateProps) {
+export default function HomeTemplate({ session, page }: HomeTemplateProps) {
   const head = useTranslations(page);
   const t = useTranslations("Common");
   const pathName = usePathname();
@@ -51,7 +53,18 @@ export default function HomeTemplate({ page }: HomeTemplateProps) {
             <p>{t('description')}</p>
           </Style.Intro>
 
-          <SignIn></SignIn>
+          <div>
+            <Style.PlanBox>
+              <h2>Starter Plan</h2>
+              <p>All the basics of a starter plan.</p>
+              <p><span>$0,10</span><span>/month</span></p>
+              {session ? (
+                <a href="/account?plan=starter">Subscribe</a>
+              ): (
+                <SignIn showGoogleIcon={false} callbackUrl="/account">Subscribe</SignIn>
+              )}
+            </Style.PlanBox>
+          </div>
         </div>
       </Style.Wrapper>
     </Layout>

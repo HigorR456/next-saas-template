@@ -7,7 +7,8 @@
     "home": "Inicio",
     "about": "Acerca de",
     "pricing": "Precios",
-    "signup": "Regístrate"
+    "signup": "Regístrate",
+    "signin_with_google": "Iniciar sesión con Google"
   },
   "HomePage": {
     "head": {

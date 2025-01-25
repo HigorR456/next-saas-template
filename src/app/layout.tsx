@@ -3,6 +3,8 @@ import StyledComponentsRegistry from './lib/registry'
 import "../styles/globals.scss";
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages } from 'next-intl/server';
+import { getServerSession } from "next-auth";
+import { SessionProvider } from "@/providers/NextAuthProvider";
 
 const roboto = Roboto({
   weight: ['400', '700'],
@@ -25,6 +27,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const locale = await getLocale();
+  const session = await getServerSession();
  
   // Providing all messages to the client
   // side is the easiest way to get started
@@ -41,7 +44,9 @@ export default async function RootLayout({
       <body className={roboto.className}>
         <StyledComponentsRegistry>
           <NextIntlClientProvider messages={messages}>
-            {children}
+            <SessionProvider session={session}>
+              {children}
+            </SessionProvider>
           </NextIntlClientProvider>
         </StyledComponentsRegistry>
       </body>

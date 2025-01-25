@@ -21,8 +21,10 @@
     "react-loading-skeleton": "^3.5.0",
     "react-select": "^5.9.0",
     "sass": "^1.77.8",
+    "stripe": "^17.5.0",
     "styled-components": "^6.1.8",
-    "sweetalert2": "^11.12.4"
+    "sweetalert2": "^11.12.4",
+    "sweetalert2-react-content": "^5.1.0"
   },
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",

@@ -7,7 +7,11 @@
     "home": "Home",
     "about": "About",
     "pricing": "Pricing",
-    "signup": "Sign Up"
+    "signup": "Sign Up",
+    "signin_with_google": "Sign in with Google",
+    "continue_with_email": "Continue with Email",
+    "form_title": "Sign in",
+    "form_text": "Welcome, please sign in to continue"
   },
   "HomePage": {
     "head": {
