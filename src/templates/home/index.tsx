@@ -46,27 +46,62 @@ export default function HomeTemplate({ session, page }: HomeTemplateProps) {
       imageUrl={head('head.imageUrl')}
       jsonLd={jsonLd}
     >
-      <Style.Wrapper>
-        <div style={{ minHeight: "100vh", marginBottom: "8rem" }}>
-          <Style.Intro>
-            <h2>{t('title')}</h2>
-            <p>{t('description')}</p>
-          </Style.Intro>
-
+      <Style.GridDotsBackground>
+        <Style.Wrapper>
           <div>
-            <Style.PlanBox>
-              <h2>Starter Plan</h2>
-              <p>All the basics of a starter plan.</p>
-              <p><span>$0,10</span><span>/month</span></p>
-              {session ? (
-                <a href="/account?plan=starter">Subscribe</a>
-              ): (
-                <SignIn showGoogleIcon={false} callbackUrl="/account">Subscribe</SignIn>
-              )}
-            </Style.PlanBox>
+            <Style.Intro>
+              <h1>{t('title')}</h1>
+              <p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></p>
+            </Style.Intro>
           </div>
-        </div>
-      </Style.Wrapper>
+        </Style.Wrapper>
+      </Style.GridDotsBackground>
+
+      <Style.SolidBackground>
+        <Style.PricingWrap>
+          <Style.PlanBox>
+            <h2>Starter Plan</h2>
+            <p>All the basics of a starter plan.</p>
+            <p><span>$0,10</span><span>/month</span></p>
+            {session ? (
+              <a href="/account?plan=starter">Subscribe</a>
+            ): (
+              <SignIn showGoogleIcon={false} callbackUrl="/account">Subscribe</SignIn>
+            )}
+          </Style.PlanBox>
+
+          <Style.PlanBox>
+            <h2>Premium Plan</h2>
+            <p>All you expect of a premium plan.</p>
+            <p><span>$2,99</span><span>/month</span></p>
+            {session ? (
+              <a href="/account?plan=premium">Subscribe</a>
+            ): (
+              <SignIn showGoogleIcon={false} callbackUrl="/account">Subscribe</SignIn>
+            )}
+          </Style.PlanBox>
+
+          <Style.PlanBox>
+            <h2>Advanced Plan</h2>
+            <p>Bonus features inlcuded.</p>
+            <p><span>$8,99</span><span>/month</span></p>
+            {session ? (
+              <a href="/">Whishlist</a>
+            ): (
+              <SignIn showGoogleIcon={false} callbackUrl="/account">Whishlist</SignIn>
+            )}
+          </Style.PlanBox>
+        </Style.PricingWrap>
+      </Style.SolidBackground>
+
+      <Style.GridDotsBackground>
+        <Style.Wrapper>
+          <Style.Intro>
+            <h1>Lorem ipsum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </Style.Intro>
+        </Style.Wrapper>
+      </Style.GridDotsBackground>
     </Layout>
   );
 }

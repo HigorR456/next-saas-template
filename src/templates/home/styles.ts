@@ -1,27 +1,58 @@
 import styled from "styled-components";
 
+export const GridDotsBackground = styled.section`
+  background: white;
+  background-image: radial-gradient(var(--color-divider) 8%, transparent 0);
+  background-size: 30px 30px;
+  background-attachment: fixed;
+  padding: 1rem;
+`;
+
 export const Wrapper = styled.div`
   max-width: 1200px;
   margin-inline: auto;
-  section {
-    padding: 1rem;
-    margin-bottom: 3rem;
-  }
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+`;
+
+export const SolidBackground = styled.section`
+  background: white;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 1rem;
 `;
 
 export const Intro = styled.div`
   max-width: 800px;
   text-align: center;
   margin-inline: auto;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+`;
+
+export const PricingWrap = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+
+  @media all and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const PlanBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   border: 1px solid var(--color-grey);
   border-radius: 3px;
   padding: 2rem;
-  width: fit-content;
+  width: calc(100% - 4rem);
+  max-width: 250px;
 
   a {
     all: unset;
@@ -41,11 +72,12 @@ export const PlanBox = styled.div`
     svg {
       margin-right: 4px;
     }
-    &:hover { color: #202020; }
+    &:hover { color: #202020; transform: translate(0, -1px); }
     &:active { color: black; }
   }
   
   p {
+    margin-top: 0;
     span {
       color: black;
       &:first-child {

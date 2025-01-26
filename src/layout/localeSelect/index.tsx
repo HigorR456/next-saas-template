@@ -33,6 +33,12 @@ const LocaleSelect = () => {
         aria-label="Select your language" 
         defaultValue={locale}
         placeholder={<IoLanguage fontSize={22} />}
+        styles={{
+          control: (baseStyles) => ({
+            ...baseStyles,
+            minHeight: '48px'
+          }),
+        }}
         // @ts-ignore
         options={locales}
         // @ts-ignore
