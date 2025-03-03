@@ -8,10 +8,12 @@ import { useTranslations } from 'next-intl';
 import { IoIosArrowDown } from 'react-icons/io';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
-import GoogleSignIn from '@/components/google-sign-in';
+import GoogleSignIn from '@/components/auth/google-sign-in';
 import { MdOutlineLogout } from "react-icons/md";
 import { signOut, useSession } from 'next-auth/react';
 import { usePathname } from 'next/navigation';
+import SignIn from '@/components/auth/sign-in';
+import SignUp from '@/components/auth/sign-up';
 
 export default function Header() {
   const [showMenu, setShowMenu] = useState<number>(0);
@@ -24,31 +26,54 @@ export default function Header() {
     await signOut();
   }
 
-  const handleContinueWithEmail = () => {
+  const handleSignUp = () => {
     withReactContent(Swal).fire({
       title: 'Create account',
+      showCloseButton: true,
+      showConfirmButton: false,
+      showClass: {
+        popup: 'swal2-popup-continue',
+      },
       html: (
-        <Style.SignUpWrap>
-          <input type="text" id="email" placeholder="Email" />
-          <input type="text" id="password" placeholder="Password" />
-        </Style.SignUpWrap>
+        <SignUp />
       ),
       confirmButtonText: 'Proceed',
     })
   }
 
-  const handleSignUp = () => {
+  const handleContinueWithEmail = () => {
+    withReactContent(Swal).fire({
+      title: 'Sign in with your email',
+      showCloseButton: true,
+      showConfirmButton: false,
+      showClass: {
+        popup: 'swal2-popup-continue',
+      },
+      html: (
+        <SignIn />
+      ),
+    })
+  }
+
+  const handleSignIn = () => {
     withReactContent(Swal).fire({
       title: 'Sign in',
       text: 'Welcome, please sign in to continue',
-      html: (
-        <Style.SignUpWrap>
-          <GoogleSignIn callbackUrl={pathname ?? "/"}>{navigation("signin_with_google")}</GoogleSignIn>
-          {/* <Style.ContinueWithEmailButton onClick={handleContinueWithEmail}>{navigation("continue_with_email")}</Style.ContinueWithEmailButton> */}
-        </Style.SignUpWrap>
-      ),
       showCloseButton: true,
       showConfirmButton: false,
+      showClass: {
+        popup: 'swal2-popup-show',
+      },
+      html: (
+        <Style.SignIn>
+          <GoogleSignIn callbackUrl={pathname ?? "/"}>{navigation("signin_with_google")}</GoogleSignIn>
+          <Style.ContinueWithEmailButton onClick={handleContinueWithEmail}>{navigation("continue_with_email")}</Style.ContinueWithEmailButton>
+          <Style.SignUpWrap>
+            {`Don't you have an account? `}
+            <a onClick={handleSignUp}>Sign up</a>
+          </Style.SignUpWrap>
+        </Style.SignIn>
+      ),
     })
   }
 
@@ -103,8 +128,8 @@ export default function Header() {
             </li>
             {!user ? (
               <Style.HighlightList>
-                <a onClick={handleSignUp}>
-                  {navigation("signup")}
+                <a onClick={handleSignIn}>
+                  {navigation("signin")}
                 </a>
               </Style.HighlightList>
             ) : (

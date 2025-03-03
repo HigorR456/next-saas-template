@@ -18,13 +18,98 @@ body {
   }
 
   button {
-    transition: all 0.2s ease-in-out;
-    font-weight: bold;
+    all: unset;
+    border: 1px solid var(--color-grey);
+    border-radius: 3px;
+    background: white;
+    color: var(--color-grey);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 48px;
+    height: 48px;
+    color: hsl(0, 0%, 38%);
+    width: 100%;
+    max-width: fit-content;
+    padding-inline: 1rem;
+    transition: all 0.1s ease-in-out;
 
-    &:hover {
+    &:not(:disabled):hover {
       transform: translate(0, -2px);
+      cursor: pointer;
     }
   }
+
+  input {
+    min-height: 38px;
+    border: 1px solid var(--color-divider);
+    border-radius: 4px;
+    font-size: 16px;
+    color: var(--color-grey);
+    padding-inline: 1rem;
+
+    
+    &:not(:focus):not(:placeholder-shown):invalid {
+      border-color: var(--color-error);
+    }
+    
+    &.error {
+      border-color: var(--color-error);
+    }
+    &.success {
+      border-color: var(--color-success);
+    }
+  }
+}
+
+.swal2-confirm, .swal2-styled {
+  all: unset;
+  cursor: pointer;
+  border: 1px solid var(--color-grey);
+  border-radius: 3px;
+  background: white;
+  color: var(--color-grey);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 48px;
+  height: 48px;
+  color: hsl(0, 0%, 38%);
+  width: 100%;
+  max-width: fit-content;
+  padding-inline: 1rem;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    transform: translate(0, -2px);
+  }
+}
+
+.swal2-popup-show {
+  @keyframes bottomFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  };
+  animation: bottomFadeIn 0.25s ease-in;
+}
+
+.swal2-popup-continue {
+  @keyframes leftFadeIn {
+    0% {
+      transform: translateX(-10px);
+    }
+  };
+  animation: leftFadeIn 0.25s ease-out;
+}
+
+.swal2-popup {
+  padding: 1rem;
+}
+
+.swal2-close {
+  max-width: initial;
 }
 
 :root {

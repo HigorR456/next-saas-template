@@ -156,6 +156,36 @@ export default function AccountTemplate({ page, accountData }: AccountTemplatePr
               </Style.HighlightBox>
             )}
           </Style.BillingWrap>
+
+          <Style.ProfileWrap>
+            <h2>Profile</h2>
+            <p>Edit your account</p>
+            {/* {accountData.stripe_url && (
+              <Style.HighlightBox>
+                <h3>Manage your subscription on Stripe.</h3>
+                <Style.Button>Open customer portal</Style.Button>
+              </Style.HighlightBox>
+            )} */}
+            <form>
+              <label>
+                E-mail
+                <input type="text" name="email" placeholder="E-mail" defaultValue={session?.user?.email || ""} />
+              </label>
+              
+              <div>
+                <label>
+                  Name
+                  <input type="text" name="name" placeholder="Name" defaultValue={session?.user?.name || ""} />
+                </label>
+
+                <label>
+                  Password
+                  <input type="text" name="password" placeholder="Password" value="" />
+                </label>
+              </div>
+              <button>Save changes</button>
+            </form>
+          </Style.ProfileWrap>
         </Style.AccountWrap>
       </Style.Wrapper>
     </Layout>

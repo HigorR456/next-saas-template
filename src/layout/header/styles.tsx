@@ -92,7 +92,6 @@ export const Nav = styled.nav`
       a {
         display: inline-flex;
         align-items: center;
-        line-height: 48px;
         height: 48px;
         text-decoration: none;
         color: #606060;
@@ -218,7 +217,7 @@ export const LogoWrap = styled(Link)`
   }
 `;
 
-export const SignUpWrap = styled.div`
+export const SignIn = styled.div`
 
 `;
 
@@ -229,7 +228,6 @@ export const ContinueWithEmailButton = styled.button`
   border: 1px solid var(--color-grey);
   border-radius: 3px;
   background: white;
-  padding-inline: 8px;
   color: var(--color-grey);
   display: inline-flex;
   align-items: center;
@@ -244,4 +242,22 @@ export const ContinueWithEmailButton = styled.button`
   }
   &:hover { color: #202020; }
   &:active { color: black; }
+`;
+
+export const SignUpWrap = styled.div`
+  margin-top: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid var(--color-divider);
+
+  a {
+    cursor: pointer;
+    color: var(--color-primary);
+    text-decoration: underline;
+    transition: .3s;
+    font-weight: bold;
+    &:hover { color: #202020; }
+    &:active { color: black; }
+  }
+
 `;

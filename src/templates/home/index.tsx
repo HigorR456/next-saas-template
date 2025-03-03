@@ -1,5 +1,5 @@
 "use client"
-import SignIn from "@/components/google-sign-in";
+import SignIn from "@/components/auth/google-sign-in";
 import Layout from "@/layout";
 import * as Style from "@/templates/home/styles"
 import { SessionType } from "@/types";
@@ -62,7 +62,7 @@ export default function HomeTemplate({ session, page }: HomeTemplateProps) {
           <Style.PlanBox>
             <h2>Starter Plan</h2>
             <p>All the basics of a starter plan.</p>
-            <p><span>$0,10</span><span>/month</span></p>
+            <p><span>$0.10</span><span>/month</span></p>
             {session ? (
               <a href="/account?plan=starter">Subscribe</a>
             ): (
@@ -73,7 +73,7 @@ export default function HomeTemplate({ session, page }: HomeTemplateProps) {
           <Style.PlanBox>
             <h2>Premium Plan</h2>
             <p>All you expect of a premium plan.</p>
-            <p><span>$2,99</span><span>/month</span></p>
+            <p><span>$2.99</span><span>/month</span></p>
             {session ? (
               <a href="/account?plan=premium">Subscribe</a>
             ): (
@@ -84,7 +84,7 @@ export default function HomeTemplate({ session, page }: HomeTemplateProps) {
           <Style.PlanBox>
             <h2>Advanced Plan</h2>
             <p>Bonus features inlcuded.</p>
-            <p><span>$8,99</span><span>/month</span></p>
+            <p><span>---</span><span>/----</span></p>
             {session ? (
               <a href="/">Whishlist</a>
             ): (

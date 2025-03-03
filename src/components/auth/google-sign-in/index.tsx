@@ -1,5 +1,5 @@
 "use-client"
-import * as Style from "./styles"
+import * as Style from "../styles"
 import { signIn } from "next-auth/react"
 import { FcGoogle } from "react-icons/fc";
 

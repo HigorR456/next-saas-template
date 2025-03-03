@@ -27,7 +27,7 @@ export const AccountWrap = styled.div`
 export const BillingWrap = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  margin-bottom: 4rem;
 
   border: 1px solid var(--color-divider);
   border-radius: 3px;
@@ -45,6 +45,54 @@ export const BillingWrap = styled.div`
     background: var(--color-divider);
     padding: 1rem;
     border-radius: 3px;
+    margin-bottom: 1rem;
+
+    h3 {
+      margin-right: 2rem;
+    }
+  }
+`;
+
+export const ProfileWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+
+  border: 1px solid var(--color-divider);
+  border-radius: 3px;
+  padding: 2rem;
+  max-width: 767px;
+  width: 100%;
+  margin-inline: auto;
+  text-align: left;
+  p { text-align: left; }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-divider);
+    gap: 1rem;
+    padding: 2rem 1rem 1.2rem;
+    border-radius: 3px;
+
+    label {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      font-weight: bold;
+      line-height: 30px;
+    }
+    
+    button {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
 
     h3 {
       margin-right: 2rem;

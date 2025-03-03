@@ -5,7 +5,7 @@ export const SelectWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  &:hover {
+  div {
     cursor: pointer;
   }
 `;

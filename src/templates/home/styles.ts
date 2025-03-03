@@ -32,8 +32,8 @@ export const Intro = styled.div`
 
 export const PricingWrap = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  gap: 1rem;
+  justify-content: center;
+  gap: 2rem;
   padding-bottom: 4rem;
   padding-top: 4rem;
 
@@ -48,7 +48,7 @@ export const PlanBox = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  border: 1px solid var(--color-grey);
+  border: 1px solid var(--color-divider);
   border-radius: 3px;
   padding: 2rem;
   width: calc(100% - 4rem);
